@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ywr-ob-p06">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="jzg-oC-2r3">
+            <objects>
+                <viewController id="ywr-ob-p06" customClass="SignInViewController" customModule="SwiftVoiceCallKitQuickstart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jlw-eL-cDC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ba2-TN-eHG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6s0-7X-p7t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wEV-s7-0wn">
+                                <rect key="frame" x="16" y="268.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-fv-t1C">
+                                <rect key="frame" x="164.5" y="306.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segue-call" id="9gi-uo-Gad"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wEV-s7-0wn" firstAttribute="centerY" secondItem="6s0-7X-p7t" secondAttribute="centerY" constant="-50" id="1RZ-Uo-itG"/>
+                            <constraint firstItem="5bz-fv-t1C" firstAttribute="centerX" secondItem="wEV-s7-0wn" secondAttribute="centerX" id="DxY-ue-rIE"/>
+                            <constraint firstItem="wEV-s7-0wn" firstAttribute="leading" secondItem="6s0-7X-p7t" secondAttribute="leadingMargin" id="XVX-q9-Vl6"/>
+                            <constraint firstItem="wEV-s7-0wn" firstAttribute="trailing" secondItem="6s0-7X-p7t" secondAttribute="trailingMargin" id="jdQ-fn-vR3"/>
+                            <constraint firstItem="5bz-fv-t1C" firstAttribute="top" secondItem="wEV-s7-0wn" secondAttribute="bottom" constant="8" id="oHZ-iO-p6I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfUser" destination="wEV-s7-0wn" id="Aq2-ES-8c3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHB-dJ-nda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786.39999999999998" y="433.13343328335833"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftVoiceCallKitQuickstart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwilioLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wqn-ZD-zTx">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wqn-ZD-zTx" secondAttribute="height" multiplier="1:1" id="Ixe-Ao-E58"/>
+                                    <constraint firstAttribute="width" constant="240" id="eQS-aZ-GXk"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BsF-xz-dls">
+                                <rect key="frame" x="16" y="175" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uic-jJ-PVN">
+                                <rect key="frame" x="120" y="129" width="135" height="30"/>
+                                <state key="normal" title="Place Outgoing Call"/>
+                                <connections>
+                                    <action selector="placeCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VPR-2L-Qq8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wqn-ZD-zTx" firstAttribute="width" secondItem="wqn-ZD-zTx" secondAttribute="height" multiplier="1:1" id="3fG-Bb-d0i"/>
+                            <constraint firstItem="Uic-jJ-PVN" firstAttribute="top" secondItem="wqn-ZD-zTx" secondAttribute="bottom" constant="-324.5" id="5Pe-Y9-dmx"/>
+                            <constraint firstItem="wqn-ZD-zTx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7tL-jC-ghz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BsF-xz-dls" secondAttribute="trailing" id="8Kh-dJ-Ru3"/>
+                            <constraint firstItem="wqn-ZD-zTx" firstAttribute="top" secondItem="BsF-xz-dls" secondAttribute="bottom" constant="8.5" id="QMo-bj-kE3"/>
+                            <constraint firstItem="Uic-jJ-PVN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TDj-X9-ccD"/>
+                            <constraint firstItem="BsF-xz-dls" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TJx-Pe-1ul"/>
+                            <constraint firstItem="wqn-ZD-zTx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dib-4M-LIF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iconView" destination="wqn-ZD-zTx" id="Wko-Lc-Lcn"/>
+                        <outlet property="placeCallButton" destination="Uic-jJ-PVN" id="oeG-C0-Aoq"/>
+                        <outlet property="tfReceiver" destination="BsF-xz-dls" id="Tte-i2-DjB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="74.212893553223395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TwilioLogo.png" width="296" height="296"/>
+    </resources>
+    <color key="tintColor" red="0.8862745098" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
